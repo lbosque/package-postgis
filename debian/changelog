@@ -1,3 +1,9 @@
+postgis (2.1.7-cdb1) precise; urgency=medium
+
+  * Update package for postgis 2.1.7
+
+ -- Luis Bosque <luisico@gmail.com>  Mon, 30 Mar 2015 16:30:08 +0200
+
 postgis (2.1.4-cdb1precise1) precise; urgency=medium
 
   * Create Postgis 2.1.4 package.
