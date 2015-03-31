@@ -1,3 +1,9 @@
+postgis (2.1.7-cdb5) precise; urgency=medium
+
+  * Fixed liblwgeom-2.1.7.install with right version
+
+ -- Luis Bosque <luisico@gmail.com>  Tue, 31 Mar 2015 11:01:08 +0200
+
 postgis (2.1.7-cdb4) precise; urgency=medium
 
   * Adapted other files for new upstream
