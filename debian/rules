@@ -120,8 +120,12 @@ build-indep-stamp: configuration-stamp
 
 #	Create a few SQL scripts that the Makefiles are not clever enough
 #	to resolve, when building arch-indep only.
+
+#	These two sql are up to date. Does not seem to be necessary
 	$(MAKE) -C postgis postgis.sql postgis_upgrade_21_minor.sql
+# Same thing here
 	$(MAKE) -C raster/rt_pg rtpostgis.sql rtpostgis_upgrade_21_minor.sql
+# Same thing here
 	$(MAKE) -C topology topology.sql topology_upgrade_21_minor.sql
 
 #	This creates the required SQL scripts. Again, the Makefile is not
@@ -273,7 +277,7 @@ install-arch: build-arch
 check: build-arch-stamp
 #   Run unit tests (against the newest Postgres version only, for
 #   now).
-	echo "LD_PRELOAD = '$(CURDIR)/liblwgeom/.libs/liblwgeom-2.1.4.so'" \
+	echo "LD_PRELOAD = '$(CURDIR)/liblwgeom/.libs/liblwgeom-2.1.7.so'" \
 		> $(CURDIR)/postgis-check-env.tmp
 	(set -e; \
 		test -z '$(CHECK)' || \
